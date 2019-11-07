@@ -17,7 +17,7 @@ public class Persona {
 
 	public Persona() {
 		nombre = "";
-		dni = "";
+		dni = generaDNI();
 		sexo = hombre;
 		edad = 0;
 		peso = 0;
@@ -31,7 +31,7 @@ public class Persona {
 		this.nombre = nombre;
 		this.edad = edad;
 		comprobarSexo(sexo);
-		dni = "";
+		dni = generaDNI();
 		peso = 0;
 		altura = 0;
 	}
@@ -100,13 +100,18 @@ public class Persona {
 	
 	// Método 5
 	
-	private void generaDNI() {
-		Random dniAleatorio = new Random();
-		int num = dniAleatorio.nextInt(10);
+	private String generaDNI() {
+		Random r = new Random();
+		String dni = "";
+		String letra = "TRWAGMYFPDXBNJZSQVHLCKE";
 				
 		for (int i = 0; i < 8; i++) {
-			dni.substring(i, i+1) = dniAleatorio[num];
+			int n = r.nextInt(10);
+			dni += Integer.toString(n);
 		}
+		int pos = Integer.valueOf(dni)%23;
+		dni += "-"+letra.charAt(pos);
+		return dni;
 	}
 	
 	// Setters
