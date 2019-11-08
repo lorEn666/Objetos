@@ -2,7 +2,7 @@ package ejercicio_1;
 
 import java.util.Scanner;
 
-public class ejercicio_1 {
+public class Principal {
 
 	private static void añadirPersona(Persona[] vClientes) {
 		Scanner leerString = new Scanner(System.in);
