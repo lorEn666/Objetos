@@ -83,10 +83,10 @@ public class Persona {
 	// Método 3
 
 	private void comprobarSexo(char sexo) {
-		Scanner leer = new Scanner(System.in);
+		
 
 		if (sexo != 'M' || sexo != 'H') {
-			sexo = hombre;
+			this.sexo = hombre;
 		}
 	}
 
@@ -94,8 +94,8 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", dni=" + dni + ", sexo=" + sexo + ", edad=" + edad + ", peso=" + peso
-				+ ", altura=" + altura + "]";
+		return "Nombre: " + nombre + "   DNI: " + dni + "   Sexo: " + sexo + "   Edad: " + edad + "   Peso: " + peso
+				+ "   Altura: " + altura + ".";
 	}
 	
 	// Método 5
